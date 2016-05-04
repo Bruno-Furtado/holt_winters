@@ -57,21 +57,19 @@ class Controller {
         self.items = itemsWithPrediction
     }
     
-    func saveResultAtFiles(forecastingFileName: String, errorsFileName: String) -> (forecastingSaved: Bool, errorsSaved: Bool) {
+    func saveResultAtFiles(forecastingFileName: String, errorsFileName: String, forecastingCompletion: (saved: Bool) -> Void, errorsCompletion: (saved: Bool) -> Void) {
         if (self.items == nil) {
             print("[WARNING] \(#file):\(#function):\(#line) - null items")
-            return (false, false)
+            forecastingCompletion(saved: false)
+            errorsCompletion(saved: false)
         }
         
         let erros = Service.errors(self.items!, s: self.s)
         let tableErros = TableErrorsModel(mae: erros.mae, mape: erros.mape)
-        
         let tableForecasting = TableItemsModel(items: self.items!)
         
-        let forecastingSaved = Service.saveContentAtFile(tableForecasting.description, fileName: forecastingFileName)        
-        let errorsSaved = Service.saveContentAtFile(tableErros.description, fileName: errorsFileName)
-        
-        return (forecastingSaved, errorsSaved)
+        Service.saveContentAtFile(tableForecasting.description, fileName: forecastingFileName, completion: forecastingCompletion)
+        Service.saveContentAtFile(tableErros.description, fileName: errorsFileName, completion: errorsCompletion)
     }
     
 }

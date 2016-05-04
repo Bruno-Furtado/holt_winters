@@ -21,18 +21,20 @@ print("Processing has been started.")
 print("Waiting...")
 
 let controller = Controller(dataFileName: dataFileName, s: s, alpha: alpha, beta: beta, gamma: gamma)
-let result = controller.saveResultAtFiles(forecastingFileName, errorsFileName: errorsFileName)
 
-if (result.forecastingSaved) {
-    print("Forecasting has been saved successfully.")
-} else {
-    print("Forecasting has not been saved.")
-}
-
-if (result.errorsSaved) {
-    print("Erros has been saved successfully.")
-} else {
-    print("Erros has not been saved.")
+controller.saveResultAtFiles(forecastingFileName, errorsFileName: errorsFileName, forecastingCompletion:
+{ (forecastingSaved) in
+    if (forecastingSaved) {
+        print("Forecasting has been saved successfully.")
+    } else {
+        print("Forecasting has not been saved.")
+    }
+}) { (errorsSaved) in
+    if (errorsSaved) {
+        print("Erros has been saved successfully.")
+    } else {
+        print("Erros has not been saved.")
+    }
 }
 
 print("")

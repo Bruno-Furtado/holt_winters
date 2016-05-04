@@ -50,8 +50,8 @@ class Service {
         return itemsArray
     }
     
-    static func saveContentAtFile(content: String, fileName: String) -> Bool {
-        return FileHelper.saveContentAtFile(content, fileName: fileName)
+    static func saveContentAtFile(content: String, fileName: String, completion: (saved: Bool) -> Void) {
+        return FileHelper.saveContentAtFile(content, fileName: fileName, completion: completion)
     }
     
     // MARK: Formulas

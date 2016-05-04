@@ -28,21 +28,23 @@ class FileHelper {
         return  nil
     }
     
-    static func saveContentAtFile(content: String, fileName: String) -> Bool {
+    static func saveContentAtFile(content: String, fileName: String, completion: (saved: Bool) -> Void) {
         if let desktopPath = NSSearchPathForDirectoriesInDomains(.DesktopDirectory, .AllDomainsMask, true).first {
             let resultPath = NSURL(fileURLWithPath: desktopPath).URLByAppendingPathComponent(fileName)
             
             do {
                 try content.writeToURL(resultPath, atomically: true, encoding: NSUTF8StringEncoding)
-                return true
+                completion(saved: true)
+                return
             } catch let error as NSError {
                 print("[ERROR] \(#file):\(#function):\(#line) - \(error.localizedDescription)")
-                return false
+                completion(saved: false)
+                return
             }
         }
         
         print("[WARNING] \(#file):\(#function):\(#line) - nil")
-        return false
+        completion(saved: false)
     }
     
 }
