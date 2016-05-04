@@ -1,5 +1,5 @@
 //
-//  TableModel.swift
+//  TableForecastingModel.swift
 //  HoltWinters
 //
 //  Created by Bruno Tortato Furtado on 03/05/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class TableItemsModel: CustomStringConvertible {
+final class TableForecastingModel: CustomStringConvertible {
     
     let items: [ItemModel]
     

@@ -66,7 +66,7 @@ class Controller {
         
         let erros = Service.errors(self.items!, s: self.s)
         let tableErros = TableErrorsModel(mae: erros.mae, mape: erros.mape)
-        let tableForecasting = TableItemsModel(items: self.items!)
+        let tableForecasting = TableForecastingModel(items: self.items!)
         
         Service.saveContentAtFile(tableForecasting.description, fileName: forecastingFileName, completion: forecastingCompletion)
         Service.saveContentAtFile(tableErros.description, fileName: errorsFileName, completion: errorsCompletion)

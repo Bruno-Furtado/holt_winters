@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F816CB091CD9478C0091FEB5 /* TableItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816CB081CD9478C0091FEB5 /* TableItemsModel.swift */; };
+		F816CB091CD9478C0091FEB5 /* TableForecastingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816CB081CD9478C0091FEB5 /* TableForecastingModel.swift */; };
 		F816CB0B1CD956890091FEB5 /* TableErrosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816CB0A1CD956890091FEB5 /* TableErrosModel.swift */; };
 		F816CB0D1CD95EBC0091FEB5 /* Double+ToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816CB0C1CD95EBC0091FEB5 /* Double+ToString.swift */; };
 		F852FD791CD80E930002D6C0 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852FD781CD80E930002D6C0 /* ItemModel.swift */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F816CB081CD9478C0091FEB5 /* TableItemsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableItemsModel.swift; sourceTree = "<group>"; };
+		F816CB081CD9478C0091FEB5 /* TableForecastingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableForecastingModel.swift; sourceTree = "<group>"; };
 		F816CB0A1CD956890091FEB5 /* TableErrosModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableErrosModel.swift; sourceTree = "<group>"; };
 		F816CB0C1CD95EBC0091FEB5 /* Double+ToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ToString.swift"; sourceTree = "<group>"; };
 		F852FD781CD80E930002D6C0 /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 			children = (
 				F852FD781CD80E930002D6C0 /* ItemModel.swift */,
 				F816CB0A1CD956890091FEB5 /* TableErrosModel.swift */,
-				F816CB081CD9478C0091FEB5 /* TableItemsModel.swift */,
+				F816CB081CD9478C0091FEB5 /* TableForecastingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 				F816CB0B1CD956890091FEB5 /* TableErrosModel.swift in Sources */,
 				F8DAD4B21CC1B2C800882FB9 /* FileHelper.swift in Sources */,
 				F852FD7C1CD810230002D6C0 /* Controller.swift in Sources */,
-				F816CB091CD9478C0091FEB5 /* TableItemsModel.swift in Sources */,
+				F816CB091CD9478C0091FEB5 /* TableForecastingModel.swift in Sources */,
 				F8BC6A511CDA201D001A6873 /* String+ToDouble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
