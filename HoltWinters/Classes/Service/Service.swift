@@ -17,27 +17,32 @@ class Service {
         // getting file values
         
         var valuesString = FileHelper.loadDataOfFileWithName(fileName)
-        
         if (valuesString == nil) {
             return nil
         }
         
-        // changing ',' for '.' to convert String to Float
+        // changing '\r' for '' to convert String to Float
         
-        valuesString = valuesString!.stringByReplacingOccurrencesOfString(",", withString: ".")
+        valuesString = valuesString!.stringByReplacingOccurrencesOfString("\r", withString: "")
         
         // split the string values in an array
         
-        let valuesArray = valuesString!.componentsSeparatedByString("\n")
+        let stringsArray = valuesString!.componentsSeparatedByString("\n")
+        var numbersArray: [NSNumber] = []
+        
+        for string in stringsArray {
+            let number = string.toNumber()
+            numbersArray.append(number)
+        }
         
         // creating an array of items
         
         var itemsArray: [ItemModel] = []
         
-        for (index, element) in valuesArray.enumerate() {
+        for (index, element) in numbersArray.enumerate() {
             let item = ItemModel()
             item.t = index + 1
-            item.d = NSString(string: element).doubleValue
+            item.d = element.doubleValue
             
             itemsArray.append(item)
         }
