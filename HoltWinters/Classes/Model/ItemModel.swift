@@ -22,15 +22,15 @@ final class ItemModel: CustomStringConvertible {
     // MARK: CustomStringConvertible
     
     var description: String {
-        var line = "\(self.t);"
+        var line = "\(self.t)"
         
-        line += (self.d == 0.0) ? ";" : "\(d.toString(2));"
-        line += (self.L == 0.0) ? ";" : "\(L.toString(4));"
-        line += (self.b == 0.0) ? ";" : "\(b.toString(6));"
-        line += (self.S == 0.0) ? ";" : "\(S.toString(6));"
-        line += (self.F == 0.0) ? ";" : "\(F.toString(4));"
-        line += (self.e == 0.0) ? ";" : "\(e.toString(3));"
-        line += (self.ep == 0.0) ? ";" : "\(ep.toString(1))%;"
+        line += (self.d == 0.0) ? ";" : ";\(d.toString(2))"
+        line += (self.L == 0.0) ? ";" : ";\(L.toString(4))"
+        line += (self.b == 0.0) ? ";" : ";\(b.toString(6))"
+        line += (self.S == 0.0) ? ";" : ";\(S.toString(6))"
+        line += (self.F == 0.0) ? ";" : ";\(F.toString(4))"
+        line += (self.e == 0.0) ? ";" : ";\(e.toString(3))"
+        line += (self.ep == 0.0) ? ";" : ";\(ep.toString(1))%"
         
         return line
     }

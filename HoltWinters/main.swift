@@ -8,7 +8,7 @@
 
 import Foundation
 
-let dataFileName = "historical_data.txt"
+let dataFileName = "input.txt"
 let forecastingFileName = "forecasting.csv"
 let errorsFileName = "errors.csv"
 
