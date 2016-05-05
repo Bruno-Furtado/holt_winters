@@ -21,15 +21,15 @@ The Holt-Winters method is a popular and effective approach to forecasting seaso
 
 ### Add a file to desktop folder
 
-The file is a TXT with a couple of numbers separeted by `\n`.
+The file is a TXT with a couple of numbers separeted by `\n`. A sample file can be found in the `Resources` folder.
 
 ```txt
-1989,00
-1981,00
-1999,00
+1,989.00 // (en format)
+1.981,00 // (pt_BR format)
+1999.00
 1995,00
 1990,50
-...
+//...
 ```
 
 ### Setup the initial values
