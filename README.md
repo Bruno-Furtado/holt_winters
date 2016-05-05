@@ -6,6 +6,8 @@
   <img alt="Platforms" src="https://img.shields.io/badge/platform-mac-lightgrey.svg" />
 </p>
 
+The Holt-Winters method is a popular and effective approach to forecasting seasonal time series. [Click here](https://www.otexts.org/fpp/7/5) to see more.
+
 ## Requirements
 
 - [x] MacOS X 10.11 or later
