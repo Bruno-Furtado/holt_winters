@@ -5,6 +5,9 @@
   <img alt="Swift" src="https://img.shields.io/badge/swift-2.2-orange.svg" />
   <img alt="Platforms" src="https://img.shields.io/badge/platform-mac-lightgrey.svg" />
 </p>
+<p align="center">
+  <img alt="Forecasting" src="https://i.imgsafe.org/ff3e82e.jpg" />
+</p>
 
 The Holt-Winters method is a popular and effective approach to forecasting seasonal time series. [Click here](https://www.otexts.org/fpp/7/5) to see more.
 
@@ -25,6 +28,7 @@ The file is a TXT with a couple of numbers separeted by `\n`.
 1999,00
 1995,00
 1990,50
+...
 ```
 
 ### Setup the initial values
