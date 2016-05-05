@@ -62,6 +62,7 @@ class Controller {
             print("[WARNING] \(#file):\(#function):\(#line) - null items")
             forecastingCompletion(saved: false)
             errorsCompletion(saved: false)
+            return
         }
         
         let erros = Service.errors(self.items!, s: self.s)
