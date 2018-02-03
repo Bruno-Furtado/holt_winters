@@ -8,10 +8,6 @@
 
 The Holt-Winters method is a popular and effective approach to forecasting seasonal time series. [Click here](https://www.otexts.org/fpp/7/5) to see more.
 
-<p align="center">
-  <img alt="Forecasting" src="https://i.imgsafe.org/ff3e82e.jpg" />
-</p>
-
 ## Requirements
 
 - [x] MacOS X 10.11 or later
